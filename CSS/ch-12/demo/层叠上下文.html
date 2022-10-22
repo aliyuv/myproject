@@ -1,23 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>层叠上下文</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
+        .box {
+            width: 800px;
+            height: 500px;
+            background-color: red;
+            position: relative;
+            z-index: 100;
+        }
+
+        .container {
+            width: 400px;
+            height: 500px;
+            background-color: #333;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .container .item1 {
+            width: 200px;
+            height: 100px;
+            background-color: sandybrown;
+            color: pink;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            border: 1px solid #000;
+            /* margin-right: 50px; */
+        }
+
+        .container .item2 {
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+            color: rebeccapurple;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            border: 1px solid #000;
+
+        }
     </style>
 </head>
+
 <body>
     <div class="box">
         <div class="container">
-            <span></span>
+            <div class="item1">你好啊,zhanyu</div>
+            <div class="item2">你好啊,陈奕迅</div>
         </div>
+        <div class="other">啥也不是,我只是个占位的div而已~</div>
     </div>
 </body>
+
 </html>
