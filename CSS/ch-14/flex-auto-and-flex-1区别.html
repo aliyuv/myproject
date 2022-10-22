@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            border: 2px solid #f00;
+            padding: 20px;
+        }
+        item{
+            border: 1px solid #f123;
+        }
+        .flex-1 item {
+            flex: 1;
+        }
+
+        .flex-auto item {
+            flex: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>flex:1</h4>
+    <div class="container flex-1">
+        <item>鱼鱼鱼鱼鱼鱼鱼鱼鱼鱼鱼鱼鱼鱼鱼鱼鱼鱼</item>
+        <item>范余</item>
+        <item>范旭</item>
+        <item>范帅</item>
+        <item>范哥</item>
+    </div>
+    <h4>flex:auto</h4>
+    <div class="container flex-auto">
+        <item>鱼鱼鱼鱼鱼鱼鱼鱼鱼鱼鱼鱼鱼鱼鱼鱼鱼鱼</item>
+        <item>范王</item>
+        <item>范旭</item>
+        <item>范帅</item>
+        <item>范哥</item>
+    </div>
+</body>
+
+</html>
