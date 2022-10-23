@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            padding: .5rem;
+            border: 1px solid lightgray;
+            background-color: #fff;
+            width: 30rem;
+        }
+
+        img {
+            width: 3rem;
+            height: 3rem;
+            margin-right: .5rem;
+        }
+
+        button {
+            align-self: center;
+            padding: 5px;
+            margin-left: .5rem;
+        }
+
+        p {
+            flex: 1;
+        }
+
+        button{
+            /* flex: none; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="./img/xxx.jpeg">
+        <p>右侧按钮没有设置flex:none，表现为最小内容宽度。我是来恶心你的我是来恶心你的我是来恶心你的</p>
+        <button>按钮</button>
+    </div>
+</body>
+
+</html>
