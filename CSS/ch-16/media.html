@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .notice {
+            display: none;
+        }
+
+        /* @media print{
+            p{
+                border: 1px solid #000;
+            }
+        } */
+        /* landscape横屏 portrait 竖屏 */
+        /* @media (orientation:portrait) {
+            .notice{display: block;}
+            p{display: none;}       
+        } */
+        @media (max-width: 1000px) {
+            body {
+                background-color: red;
+            }
+        }
+
+        @media (max-width:768px) {
+            body {
+                background-color: blue;
+            }
+        }
+
+        @media (max-width:400px) {
+            body {
+                background-color: skyblue;
+            }
+        }
+    </style>
+    <p>hello world</p>
+    <p class="notice">不支持竖屏</p>
+</body>
+
+</html>
