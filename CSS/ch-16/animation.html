@@ -1,12 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <!-- <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+            animation: rotate 4s linear;
+            margin: 100px auto;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(180deg);
+            }
+        }
+    </style> -->
+    <style>
+        .box {
+        width: 100px;
+        height: 100px;
+        background-color: lightcoral;
+        margin: 100px auto;
+        /* animation: rotate 1s;  */
+        /* animation: rotate 1s linear;  */
+        /* animation: rotate 1s ease .3s; */
+        /* animation: rotate 1s linear infinite; */
+        animation: rotate 4s cubic-bezier(0.37, 0, 0.63, 1) 2s infinite alternate;
+        }
+       @keyframes rotate {
+        0% {
+        transform: rotate(0);
+        }
+        100% {
+        transform: rotate(180deg);
+        }
+       }
+       </style>
+    <div class="box">1234567890</div>
 </body>
+
 </html>
