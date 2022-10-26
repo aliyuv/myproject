@@ -13,6 +13,11 @@ body {
   background-size: cover;
 }
 
+@media (max-width: 390px) {
+  body {
+    background: url(../img/bg2.jpeg) no-repeat 0 0;
+  }
+}
 .container {
   display: grid;
   grid: auto auto auto/1fr 400px 400px 1fr;
@@ -46,7 +51,6 @@ body {
   justify-content: center;
   align-items: center;
   position: absolute;
-  z-index: 10;
   cursor: pointer;
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
@@ -133,9 +137,48 @@ body {
 .container .search-box .float-box > section .item {
   margin-top: 10px;
   cursor: pointer;
+  transition: all 0.3s;
+}
+.container .search-box .float-box > section .item:hover {
+  color: white;
 }
 .container .search-box .float-box > section .item:first-child {
   grid-area: 2/1/3/2;
+}
+.container .tool-sites {
+  min-width: 800px;
+  grid-area: 2/2/3/3;
+  margin-top: 200px;
+  display: grid;
+  grid: auto auto/1fr 60px 1fr;
+}
+.container .tool-sites .programmer,
+.container .tool-sites .stylist {
+  border-radius: 22px;
+  background-color: rgb(32, 213, 134);
+  padding: 20px;
+}
+.container .tool-sites .programmer .tool-item,
+.container .tool-sites .stylist .tool-item {
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+.container .tool-sites .programmer .tool-item .item-list,
+.container .tool-sites .stylist .tool-item .item-list {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: orange;
+  padding: 12px;
+  border-radius: 8px;
+  color: #eee;
+}
+.container .tool-sites .programmer {
+  grid-area: 1/1/2/2;
+}
+.container .tool-sites .stylist {
+  grid-area: 1/3/2/4;
 }
 
 @font-face {
@@ -157,4 +200,8 @@ body {
 
 .icon-bing:before {
   content: "\e69a";
+}
+
+.active {
+  color: aqua !important;
 }/*# sourceMappingURL=index.css.map */

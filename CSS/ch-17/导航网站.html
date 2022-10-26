@@ -56,15 +56,56 @@
                 </section>
             </div>
         </section>
+        <section class="tool-sites">
+            <div class="programmer">
+                <h1>程序员常用工具</h1>
+                <div class="tool-item">
+                    <div class="item-list">知乎</div>
+                    <div class="item-list">知乎</div>
+                    <div class="item-list">知乎</div>
+                    <div class="item-list">知乎</div>
+                    <div class="item-list">知乎</div>
+                    <div class="item-list">知乎</div>
+                    <div class="item-list">知乎</div>
+                    <div class="item-list">知乎</div>
+                    <div class="item-list">知乎</div>
+                </div>
+            </div>
+            <div class="stylist">
+                <h1>设计师常用工具</h1>
+                <div class="tool-item">
+                    <div class="item-list">知乎</div>
+                    <div class="item-list">知乎</div>
+                    <div class="item-list">知乎</div>
+                    <div class="item-list">知乎</div>
+                    <div class="item-list">知乎</div>
+                    <div class="item-list">知乎</div>
+                    <div class="item-list">知乎</div>
+                    <div class="item-list">知乎</div>
+                    <div class="item-list">知乎</div>
+                </div>
+            </div>
+        </section>
     </div>
     <script>
-        $('.google').click(() => {
-            $('.float-box').show(1600)
+        $('.google').mouseenter(() => {
+            $('.float-box').show()
             $('.item').click(() => {
-                $('.float-box').hide(2000)
+                $('.float-box').hide()
             })
-        })
 
+        })
+        $('.float-box').mouseleave(() => {
+            $('.float-box').hide()
+        })
+        document.documentElement.addEventListener('click', function () {
+            $('.float-box').hide()
+
+        })
+        // $('.searchs>span').hover(() => {
+        //     $(this).addClass("active").siblings().removeClass("active");
+        //     // $(".products .main").eq($(this).index()).show().siblings().hide();
+        // })
     </script>
 </body>
 
