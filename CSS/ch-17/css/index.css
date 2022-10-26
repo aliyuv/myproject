@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flow-root;
+  height: 100vh;
+  background: url(../img/bg.jpg) no-repeat 0 0;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  background-size: cover;
+}
+
+.container {
+  display: grid;
+  grid: auto auto auto/1fr 400px 400px 1fr;
+  margin-top: 100px;
+}
+.container .search-box {
+  grid-area: 1/2/2/4;
+  height: 48px;
+}
+.container .search-box .input {
+  position: relative;
+}
+.container .search-box .input input {
+  border-radius: 16px;
+  border: 1px solid #eee;
+  width: 100%;
+  padding: 10px 50px;
+  height: 48px;
+  outline: none;
+  box-shadow: 4px 5px 15px 0px rgba(224, 235, 253, 0.75);
+  transition: all 0.3s;
+}
+.container .search-box .input input:focus {
+  border-color: rgb(61, 61, 165);
+  transition: all 0.3s;
+}
+.container .search-box .input .ps {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+.container .search-box .input .google {
+  top: 0px;
+  left: 0px;
+  transition: all 0.3s;
+  -webkit-animation: normal;
+          animation: normal;
+}
+.container .search-box .input .google:hover i {
+  color: orange;
+  -webkit-animation: fade-in-out 0.3s, cubic-bezier(0.4, 0, 0.6, 1);
+          animation: fade-in-out 0.3s, cubic-bezier(0.4, 0, 0.6, 1);
+}
+.container .search-box .input .search-icon:hover i {
+  color: orange;
+  -webkit-animation: rotate-180 0.8s, cubic-bezier(0.4, 0, 0.6, 1);
+          animation: rotate-180 0.8s, cubic-bezier(0.4, 0, 0.6, 1);
+}
+@-webkit-keyframes fade-in-out {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes fade-in-out {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes rotate-180 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-180 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.container .search-box .input .search-icon {
+  top: 0px;
+  right: 0px;
+}
+
+@font-face {
+  font-family: "iconfont"; /* Project id 3731303 */
+  src: url("//at.alicdn.com/t/c/font_3731303_vpvou6s7sxt.woff2?t=1666782162752") format("woff2"), url("//at.alicdn.com/t/c/font_3731303_vpvou6s7sxt.woff?t=1666782162752") format("woff"), url("//at.alicdn.com/t/c/font_3731303_vpvou6s7sxt.ttf?t=1666782162752") format("truetype");
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bing:before {
+  content: "\e69a";
+}/*# sourceMappingURL=index.css.map */
