@@ -8,6 +8,7 @@
     <title>导航网站</title>
     <link rel="stylesheet" href="./css/index.css">
     <script src="https://kit.fontawesome.com/1e41ce7bd2.js" crossorigin="anonymous"></script>
+    <script src="./js/jQuery.js"></script>
 </head>
 
 <body>
@@ -15,7 +16,7 @@
         <section class="search-box">
             <div class="input">
                 <div class="ps google">
-                    <i class="fab fa-google" ></i>
+                    <i class="fab fa-google"></i>
                 </div>
                 <input type="text" placeholder="输入关键词开始搜索">
                 <div class="ps search-icon">
@@ -24,12 +25,20 @@
             </div>
             <div class="float-box">
                 <div class="triangle">
-                    <i class="fa-solid fa-triangle"></i>
+                    <i class="fa-solid fa-caret-up"></i>
                 </div>
                 <section>
-                    <div class="title">请选择搜索引擎</div>
+                    <div class="title">请选择搜索引擎:</div>
                     <div class="searchs item">
                         <i class="iconfont icon-bing"></i>
+                        <span>必应</span>
+                    </div>
+                    <div class="searchs item">
+                        <i class="iconfont icon-bing"></i>
+                        <span>必应</span>
+                    </div>
+                    <div class="searchs item">
+                        <i class=" iconfont icon-bing"></i>
                         <span>必应</span>
                     </div>
                     <div class="searchs item">
@@ -48,6 +57,15 @@
             </div>
         </section>
     </div>
+    <script>
+        $('.google').hover(() => {
+            $('.float-box').toggle(() => {
+                $('.float-box').next().show(1000)
+            }, () => {
+                $('.float-box').next().hide(2000)
+            })
+        })
+    </script>
 </body>
 
 </html>
