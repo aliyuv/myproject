@@ -107,13 +107,13 @@ body {
 .container .search-box .float-box {
   border-radius: 18px;
   position: relative;
-  background-color: #ccc;
+  background-color: #FECB96;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   padding: 10px 20px;
   display: none;
 }
 .container .search-box .float-box .triangle {
-  color: #ccc;
+  color: #FECB96;
   width: 100%;
   position: absolute;
   top: -16px;
@@ -132,6 +132,7 @@ body {
 }
 .container .search-box .float-box > section .item {
   margin-top: 10px;
+  cursor: pointer;
 }
 .container .search-box .float-box > section .item:nth-child(1) {
   grid-area: 2/1/3/2;
