@@ -62,11 +62,6 @@ body {
   -webkit-animation: normal;
           animation: normal;
 }
-.container .search-box .input .google:hover i {
-  color: orange;
-  -webkit-animation: fade-in-out 0.3s, cubic-bezier(0.4, 0, 0.6, 1);
-          animation: fade-in-out 0.3s, cubic-bezier(0.4, 0, 0.6, 1);
-}
 .container .search-box .input .search-icon:hover i {
   color: orange;
   -webkit-animation: rotate-180 0.8s, cubic-bezier(0.4, 0, 0.6, 1);
@@ -111,13 +106,13 @@ body {
 .container .search-box .float-box {
   border-radius: 18px;
   position: relative;
-  background-color: #FECB96;
+  background-color: #B2B2B2;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   padding: 10px 20px;
   display: none;
 }
 .container .search-box .float-box .triangle {
-  color: #FECB96;
+  color: #B2B2B2;
   width: 100%;
   position: absolute;
   top: -16px;
@@ -155,24 +150,34 @@ body {
 .container .tool-sites .programmer,
 .container .tool-sites .stylist {
   border-radius: 22px;
-  background-color: rgb(32, 213, 134);
+  background-color: rgba(147, 161, 76, 0.2);
   padding: 20px;
+}
+.container .tool-sites .programmer h1,
+.container .tool-sites .stylist h1 {
+  color: rgb(38, 31, 31);
 }
 .container .tool-sites .programmer .tool-item,
 .container .tool-sites .stylist .tool-item {
   display: flex;
   flex-wrap: wrap;
   cursor: pointer;
+  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.021), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.031), 12.5px 12.5px 10px rgba(0, 0, 0, 0.037), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.043), 41.8px 41.8px 33.4px rgba(0, 0, 0, 0.051), 100px 100px 80px rgba(0, 0, 0, 0.07);
 }
 .container .tool-sites .programmer .tool-item .item-list,
 .container .tool-sites .stylist .tool-item .item-list {
   margin: 10px;
   display: flex;
   justify-content: center;
-  background-color: orange;
+  background-color: rgba(188, 226, 158, 0.2);
   padding: 12px;
   border-radius: 8px;
-  color: #eee;
+  transition: all 0.3s;
+}
+.container .tool-sites .programmer .tool-item .item-list:hover,
+.container .tool-sites .stylist .tool-item .item-list:hover {
+  background-color: rgba(43, 80, 15, 0.2);
+  color: rgb(202, 196, 196);
 }
 .container .tool-sites .programmer {
   grid-area: 1/1/2/2;
@@ -203,5 +208,7 @@ body {
 }
 
 .active {
-  color: aqua !important;
+  color: orange;
+  -webkit-animation: fade-in-out 0.3s, cubic-bezier(0.4, 0, 0.6, 1);
+          animation: fade-in-out 0.3s, cubic-bezier(0.4, 0, 0.6, 1);
 }/*# sourceMappingURL=index.css.map */
