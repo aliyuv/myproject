@@ -111,6 +111,17 @@
         //     $(this).addClass("active").siblings().removeClass("active");
         //     // $(".products .main").eq($(this).index()).show().siblings().hide();
         // })
+        const el = document.querySelector('.google')
+        console.log(el)
+        el.addEventListener('touchstart',() => {
+           
+            $('.float-box').show()
+            $('.item').click(() => {
+                $('.float-box').hide()
+            })
+            $('.google').addClass('active')
+        })
+    
     </script>
 </body>
 
