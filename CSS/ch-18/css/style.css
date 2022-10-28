@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: url("../img/bg.jpg") no-repeat 0 0;
+  background-size: cover;
+}
+
+.wrapper .container {
+  width: 100%;
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 8px 12px;
+}
+.wrapper .container .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 2px;
+}
+.wrapper .container .form .input {
+  position: relative;
+  background: transparent;
+  padding-right: 6px;
+  width: 428px;
+  transition: all ease 0.3s;
+  border-radius: 22px;
+}
+.wrapper .container .form .input > input {
+  border: 2px solid #383838;
+  width: 100%;
+  outline: none;
+  height: 32px;
+  padding: 2px 12px;
+  border-radius: 22px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #cecece;
+  background: #4e4e4e;
+}
+.wrapper .container .form .input > input:hover {
+  border-color: #52a895;
+}
+.wrapper .container .form .input > i {
+  position: absolute;
+  right: 12px;
+  top: 6px;
+}
+.wrapper .container .form .input:hover {
+  width: 600px;
+}
+.wrapper .container .form .buttons {
+  display: flex;
+}
+.wrapper .container .form .buttons button {
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+}
+.wrapper .container .form .buttons .google,
+.wrapper .container .form .buttons .biying {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 4px;
+  border: 1px solid #000;
+  margin-right: 8px;
+  border-radius: 8px;
+  transition: all ease-in 0.3s;
+}
+.wrapper .container .form .buttons .biying:hover {
+  background: red;
+  color: #cecece;
+}
+
+@media (max-width: 390px) {
+  .input {
+    margin-bottom: 10px;
+  }
+}/*# sourceMappingURL=style.css.map */
