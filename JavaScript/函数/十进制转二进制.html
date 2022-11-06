@@ -7,15 +7,29 @@
 <body>
 <script>
   //二进制 转 十进制
-  function switch1(str) {
-    let temp = 0
-    for (let i = 0; i < str.length; i++) {
-      temp += str.charAt(i) * Math.pow(2, str.length - i - 1)
+  // function switch1(str) {
+  //   let temp = 0
+  //   for (let i = 0; i < str.length; i++) {
+  //     temp += str.charAt(i) * Math.pow(2, str.length - i - 1)
+  //   }
+  //   return temp
+  // }
+  //
+  // console.log(switch1('101011'))
+
+  //另一种写法
+  function switch2(str) {
+    let num = 0
+    let idx = 0
+    while (idx < str.length) {
+      console.log(str[str.length - idx - 1]);
+      num += parseInt(str[str.length - idx - 1]) * (2 ** idx)
+      idx++
     }
-    return temp
+    return num
   }
 
-  console.log(switch1('101011'))
+  console.log(switch2('111010'));
 </script>
 </body>
 </html>
