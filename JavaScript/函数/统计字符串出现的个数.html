@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  const str = "hello world";
+
+  function countStr(str) {
+    let obj = {}
+    for (let i = 0; i < str.length; i++) {
+      let char = str.charAt(i)
+      if (char === ' ') continue
+      if (obj[char]) {
+        obj[char]++
+      } else {
+        obj[char] = 1
+      }
+    }
+    return obj
+  }
+
+  console.log(countStr(str));
+</script>
+</body>
+</html>

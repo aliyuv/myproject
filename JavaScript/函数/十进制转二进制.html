@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //二进制 转 十进制
+  function switch1(str) {
+    let temp = 0
+    for (let i = 0; i < str.length; i++) {
+      temp += str.charAt(i) * Math.pow(2, str.length - i - 1)
+    }
+    return temp
+  }
+
+  console.log(switch1('101011'))
+</script>
+</body>
+</html>
+
