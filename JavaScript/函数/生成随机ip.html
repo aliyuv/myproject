@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //生成随机ip
+  function randomIp() {
+    let ip = ''
+    for (let i = 0; i < 4; i++) {
+      ip += Math.floor(Math.random() * 256) + '.'
+    }
+    return ip.slice(0, ip.length - 1)
+  }
+
+  console.log(randomIp());
+
+  //生成随机颜色
+  function randomColor() {
+    let color = '#'
+    for (let i = 0; i < 6; i++) {
+      color += Math.floor(Math.random() * 16).toString(16)
+    }
+    return color
+  }
+
+  console.log(randomColor());
+
+  //生成随机验证码
+  function randomCode() {
+    let code = ''
+    for (let i = 0; i < 4; i++) {
+      code += Math.floor(Math.random() * 10)
+    }
+    return code
+  }
+
+  //打印杨辉三角
+  // const triangle = ({resultCount = 5, inicializedState =[[1]]} = {}) => {
+  //   if (inicializedState.length >= resultCount) return [...inicializedState];
+  //   const tempMathArr = [0,...inicializedState[inicializedState.length-1],0]
+  //   console.log(tempMathArr);
+  //   const newLeveArr = [...inicializedState[inicializedState.length -1],0].map((arrItem,position) => {
+  //      return tempMathArr[position] + tempMathArr[position + 1]
+  //   })
+  //   return  triangle({
+  //     inicializedState: [...inicializedState,newLeveArr],
+  //     resultCount
+  //   })
+  // }
+  //
+  // console.log(triangle());
+
+  // function yanghui(n) {
+  //   let arr = Array(n).fill(0).map(x => Array(n).fill(0))
+  //   console.log(arr);
+  //   for (let line = 0; line < n; line++) {
+  //     for (let i = 0; i <= line; i++) {
+  //       if (line === i || i === 0) {
+  //         arr[line][i] = 1
+  //       } else {
+  //         arr[line][i] = arr[line - 1][i - 1] + arr[line -1][i]
+  //       }
+  //     }
+  //   }
+  //   return arr
+  // }
+  //
+  // console.log(yanghui(5));
+
+  //杨辉三角算法
+    function yanghui(n) {
+        let arr = Array(n).fill(0).map(x => Array(n).fill(0))
+        for (let line = 0; line < n; line++) {
+        for (let i = 0; i <= line; i++) {
+            if (line === i || i === 0) {
+            arr[line][i] = 1
+            } else {
+            arr[line][i] = arr[line - 1][i - 1] + arr[line - 1][i]
+            }
+        }
+        }
+        return arr
+    }
+
+  console.log(yanghui(5));
+</script>
+</body>
+</html>
