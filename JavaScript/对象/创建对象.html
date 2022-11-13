@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //创建对象的两种方式
+    // const user = { name: 'zhangsan' }
+    // console.log(user)
+    //字面量的方式创建
+    // const p1 = new Object({name: 'a'})
+    // console.log(p1)
+
+    //计算属性得到的key
+
+    // const c = 1 + 2
+    // const num = {[c]:3}
+    // num[c]
+    // console.log(num)
+
+    //属性操作符
+    // const name = {name: '王小花',age: 18,obj: {count: 1}}
+    // console.log('age' in name)
+
+    //遍历
+    // for(let key in name){
+    //   console.log(key)
+    //   console.log(name[key])
+    // }
+
+    // const name = { name: '王小花', age: 18, obj: { count: 1 } }
+
+    // p1.obj.count = 2
+    // console.log(name.obj === p1.obj) //true 同一个引用
+
+
+    //在对象中普通函数中的this
+    // const user = {
+    //   name: '李银河',
+    //   runing() {
+    //     console.log(this.name, '正在跑步')
+    //   }
+    // }
+    // console.log(user.runing())
+
+    // 在对象中箭头函数中的this是取决于外部上下文中的this
+    // const user = {
+    //   name: '李银河',
+    //   runing() {
+    //     return () => this.name + '正在跑步'
+    //   }
+    // }
+    // console.log(user.runing()())
+
+    //可选链 ?.
+    // const user = {
+    //   name: '张三',
+    //   group: {
+    //     // name: '1111'
+    //   }
+    // }
+
+    // console.log(user.group?.name)
+
+    //symbol
+    let id = Symbol('id')
+    const user = {
+
+    }
+    user[id] = 1
+    console.log(user)
+
+    // symbol的值不会被遍历
+    // console.log(Object.keys(user))
+    // for(let key in user){
+    //   console.log(key)
+    //   console.log(1)
+    // }
+
+    
+  </script> 
+</body>
+
+</html>

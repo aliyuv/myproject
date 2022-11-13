@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var count = 3
+    var randomSum = Math.floor(Math.random() * 100)
+    var isTrue = false
+    for (var i = 0; i < count; i++) {
+
+      var inputNum = Number(window.prompt('请输入数字开始游戏'))
+      if (inputNum === randomSum) {
+        window.alert("您猜对了,恭喜您")
+        isTrue = true
+        break
+      } else if (inputNum > randomSum) {
+        window.alert("您猜大了")
+      } else {
+        window.alert("您猜小了")
+      }
+
+      if (i === count - 1) {
+        window.alert("您的次数用完了")
+      }
+
+    }
+  </script>
+</body>
+
+</html>
