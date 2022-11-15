@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    section {
+      width: 800px;
+      margin: 0 auto;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+      background-color: red;
+    }
+
+    .tabs>li {
+      width: 80px;
+      margin-right: 1px;
+      background-color: #fff;
+    }
+
+    .tabs>li.active {
+      color: #fff;
+      background-color: blue;
+    }
+
+    .tabs-content>li {
+      display: none;
+    }
+
+    .tabs-content>li.active {
+      display: block;
+    }
+
+  </style>
+</head>
+
+<body>
+  <section>
+    <ul class="tabs">
+      <li class="active">tab1</li>
+      <li>tab2</li>
+      <li>tab3</li>
+    </ul>
+    <ul class="tabs-content">
+      <li class="active">1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </section>
+  <script>
+    const $tabLis = document.querySelectorAll('.tabs>li');
+    const $tabsContent = document.querySelectorAll('.tabs-content>li')
+    $tabLis.forEach((v, idx) => {
+      v.addEventListener('click', () => {
+        $tabLis.forEach(node => node.classList.remove('active'))
+        $tabLis[idx].classList.add('active')
+        $tabsContent.forEach(node => node.classList.remove('active'))
+        $tabsContent[idx].classList.add('active')
+      })
+    })
+  </script>
+</body>
+
+</html>
