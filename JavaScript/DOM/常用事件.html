@@ -7,8 +7,8 @@
     <title>Document</title>
     <style>
         * {
-            margin: 0;
-            padding: 0;
+            /*margin: 0;*/
+            /*padding: 0;*/
         }
     </style>
 </head>
@@ -83,9 +83,241 @@
 <!--  })-->
 <!--</script>-->
 
-<style>
+<!--<style>-->
+<!--    .status span {-->
+<!--        border: 1px solid #000;-->
+<!--    }-->
 
-</style>
+<!--    .active {-->
+<!--        color: #fff;-->
+<!--        background-color: #000;-->
+<!--    }-->
 
+<!--    .text {-->
+<!--        padding: 1px;-->
+<!--        border: 1px solid #ccc;-->
+<!--        min-height: 20px;-->
+<!--        background-color: #000;-->
+<!--        color: #fff;-->
+<!--    }-->
+<!--    .text::after{-->
+<!--        content: "";-->
+<!--        display: inline-block;-->
+<!--        height: 12px;-->
+<!--        width: 4px;-->
+<!--        background-color: #fff;-->
+<!--        animation: blink 1s infinite ease-in;-->
+<!--        position: relative;-->
+<!--        top: 2px;-->
+<!--    }-->
+
+<!--    @keyframes blink {-->
+<!--        0%{-->
+<!--            opacity: 1;-->
+<!--        }-->
+
+<!--        50%{-->
+<!--            opacity: 0;-->
+<!--        }-->
+
+<!--        100%{-->
+<!--            opacity: 1;-->
+<!--        }-->
+<!--    }-->
+<!--</style>-->
+<!--<div class="status">-->
+<!--    <span class="ctrl">ctrl</span>-->
+<!--    <span class="meta">command</span>-->
+<!--    <pre class="text"></pre>-->
+<!--</div>-->
+<!--<script>-->
+<!--  const $ = s => document.querySelector(s)-->
+<!--  document.addEventListener('keydown', (e) => {-->
+<!--    e.preventDefault()-->
+<!--    switch (e.key) {-->
+<!--      case 'Backspace':-->
+<!--        $('.text').innerText = $('.text').innerText.slice(0, -1)-->
+<!--        break-->
+<!--      case 'Enter':-->
+<!--        $('.text').append('\n')-->
+<!--        break-->
+<!--      default:-->
+<!--        e.key.length === 1 && $('.text').append(e.key)-->
+<!--        e.ctrlKey && $('.ctrl').classList.add('active')-->
+<!--        e.metaKey && $('.meta').classList.add('active')-->
+<!--        break-->
+<!--    }-->
+<!--  })-->
+<!--  document.addEventListener('keyup', (e) => {-->
+<!--    $('.ctrl').classList.remove('active')-->
+<!--    $('.meta').classList.remove('active')-->
+<!--  })-->
+<!--</script>-->
+
+<!--<style>-->
+<!--    .wrap{-->
+<!--        height: 200px;-->
+<!--        overflow-y: scroll;-->
+<!--    }-->
+<!--</style>-->
+<!--<div class="wrap">-->
+<!--    <p>项目1</p>-->
+<!--    <p>项目2</p>-->
+<!--    <p>项目3</p>-->
+<!--    <p>项目4</p>-->
+<!--    <p>项目5</p>-->
+<!--    <p>项目6</p>-->
+<!--    <p>项目7</p>-->
+<!--    <p>项目8</p>-->
+<!--    <p>项目9</p>-->
+<!--    <p>项目10</p>-->
+<!--    <p>项目11</p>-->
+<!--    <p>项目12</p>-->
+<!--    <p>项目13</p>-->
+<!--    <p>项目14</p>-->
+<!--    <p>项目15</p>-->
+<!--    <p>项目16</p>-->
+<!--    <p>项目17</p>-->
+<!--    <p>项目18</p>-->
+<!--    <p>项目19</p>-->
+<!--    <p>项目20</p>-->
+<!--    <p>项目21</p>-->
+<!--    <p>项目22</p>-->
+<!--    <p>项目23</p>-->
+<!--    <p>项目24</p>-->
+<!--    <p>项目25</p>-->
+<!--    <p>项目26</p>-->
+<!--    <p>项目27</p>-->
+<!--    <p>项目28</p>-->
+<!--    <p>项目29</p>-->
+<!--    <p>项目30</p>-->
+<!--</div>-->
+<!--<script>-->
+<!--    const wrap = document.querySelector('.wrap')-->
+<!--    // wrap.scrollTo({top: 100,behavior: 'smooth'})-->
+<!--    wrap.onscroll = function (e){-->
+<!--      console.log(this.scrollTop);-->
+<!--    }-->
+<!--    document.onkeydown =function (e){-->
+<!--      if (e.key === 'n'){-->
+<!--        wrap.scrollBy(0,10)-->
+<!--      }-->
+<!--    }-->
+<!--</script>-->
+
+
+<!--<input type="text">-->
+<!--<span class="log"></span>-->
+<!--<script>-->
+<!--  const input = document.querySelector('input')-->
+<!--  const log = document.querySelector('.log')-->
+<!--  input.onfocus = function () {-->
+<!--    log.innerText = '获得焦点'-->
+<!--  }-->
+<!--  input.onblur = function () {-->
+<!--    log.innerText = '失去焦点'-->
+<!--  }-->
+
+<!--</script>-->
+
+<!--<input type="text">-->
+<!--<select name="" id="select">-->
+<!--    <option value="1">A</option>-->
+<!--    <option value="2">B</option>-->
+<!--    <option value="3">C</option>-->
+<!--</select>-->
+<!--<script>-->
+<!--  const $ = s => document.querySelector(s)-->
+<!--  $('input').onchange = function () {-->
+<!--    console.log('change:', this.value)-->
+<!--  }-->
+<!--  $('input').oninput = function () {-->
+<!--    console.log('input:', this.value)-->
+
+<!--  }-->
+<!--  $('#select').onchange = function () {-->
+<!--    console.log('change', this.value)-->
+<!--  }-->
+<!--</script>-->
+
+<!--<form action="/login">-->
+
+<!--    <input class="username" type="text">-->
+
+<!--    <div class="msg"></div>-->
+
+<!--    <button>提交</button>-->
+
+<!--</form>-->
+<!--<script>-->
+<!--    const $ = s => document.querySelector(s)-->
+<!--    $('form').addEventListener('submit',function (e){-->
+<!--      e.preventDefault()-->
+<!--      if (/^\w{6,12}$/.test($('.username').value)){-->
+<!--        $('form').submit()-->
+<!--        $('form').innerText = ''-->
+<!--      }else{-->
+<!--        $('form .msg').innerText = '出错了'-->
+<!--      }-->
+<!--    })-->
+<!--</script>-->
+
+
+<!--<style>-->
+
+<!--    .wrap {-->
+<!--        display: flex;-->
+<!--        min-height: 100px;-->
+<!--        overflow-y: scroll;-->
+<!--    }-->
+
+<!--    textarea {-->
+<!--        width: 50%;-->
+<!--    }-->
+
+<!--    .preview {-->
+<!--        width: 50%;-->
+<!--        background: lightgrey;-->
+<!--    }-->
+
+<!--</style>-->
+
+<!--<div class="wrap">-->
+<!--    <textarea>hello</textarea>-->
+
+<!--    <div class="preview">ddd</div>-->
+
+<!--</div>-->
+
+<!--<script>-->
+<!--  const $ = s => document.querySelector(s)-->
+<!--  $('.preview').onpaste = function (e) {-->
+<!--    const text = e.clipboardData.getData('text/plain')-->
+<!--    // console.log(text);-->
+<!--    this.innerText = text-->
+<!--    e.preventDefault()-->
+<!--  }-->
+
+<!--  $('textarea').oncopy = function (e) {-->
+<!--    console.log(e.type + '-' + document.getSelection())-->
+<!--    // e.preventDefault()-->
+<!--  }-->
+<!--</script>-->
+
+
+<!--<img src="https://t7.baidu.com/it/u=4036010509,3445021118&fm=193&f=GIF" alt="">-->
+<!--<script>-->
+<!--  const $ = s => document.querySelector(s)-->
+<!--  window.onload = function () {-->
+<!--    console.log(' window.onload');-->
+<!--  }-->
+<!--  document.addEventListener('DOMContentLoaded', function () {-->
+<!--    console.log('DOMContentLoaded');-->
+<!--  })-->
+<!--  console.log($('img').width);-->
+<!--  $('img').onload = function () {-->
+<!--    console.log(this.width);-->
+<!--  }-->
+<!--</script>-->
 </body>
 </html>
