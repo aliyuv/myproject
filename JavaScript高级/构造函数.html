@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Preson(name = "aliyu", age = 18) {
+        const obj = Object.create(Preson.共有属性); // const obj = {隐式原型: Preson.共有属性};
+        obj.name = name;
+        obj.age = age;
+        return obj;
+      }
+      Preson.共有属性 = {
+        satHi() {
+          console.log(`hi - ${this.name}`);
+        },
+        run() {
+          console.log(`${this.name} is running`);
+        },
+      };
+      const p1 = Preson("aliyu", 18);
+      console.log(p1);
+    </script>
+  </body>
+</html>

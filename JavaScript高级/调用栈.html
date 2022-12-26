@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // 请说出下面代码调用栈的执行顺序?
+      const global1 = 0.1;
+      const f1 = function () {
+        const value1 = 1;
+        const obj1 = { number: 1 };
+        return f2(value1, obj1);
+      };
+      const f2 = function (x, y) {
+        const value2 = 2;
+        const obj2 = { number: 2 };
+        return x + y.number + value2 + obj2.number;
+      };
+      debugger;
+      f1();
+    </script>
+  </body>
+</html>
