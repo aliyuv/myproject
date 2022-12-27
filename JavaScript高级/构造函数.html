@@ -8,22 +8,40 @@
   </head>
   <body>
     <script>
-      function Preson(name = "aliyu", age = 18) {
-        const obj = Object.create(Preson.共有属性); // const obj = {隐式原型: Preson.共有属性};
-        obj.name = name;
-        obj.age = age;
-        return obj;
+      // function Preson(name = "aliyu", age = 18) {
+      //   const obj = Object.create(Preson.共有属性); // const obj = {隐式原型: Preson.共有属性};
+      //   obj.name = name;
+      //   obj.age = age;
+      //   return obj;
+      // }
+      // Preson.共有属性 = {
+      //   satHi() {
+      //     console.log(`hi - ${this.name}`);
+      //   },
+      //   run() {
+      //     console.log(`${this.name} is running`);
+      //   },
+      // };
+      // const p1 = Preson("aliyu", 18);
+      // console.log(p1);
+
+      function Person(name = "a", age = 18) {
+        this.name = name;
+        this.age = age;
       }
-      Preson.共有属性 = {
-        satHi() {
+      Person.共有属性 = {
+        constructor: Person,
+        sayHi() {
           console.log(`hi - ${this.name}`);
         },
         run() {
           console.log(`${this.name} is running`);
         },
+        种类: "人类",
       };
-      const p1 = Preson("aliyu", 18);
+      const p1 = new Person("aliyu", 18);
       console.log(p1);
+      console.log(p1.constructor); // Person
     </script>
   </body>
 </html>

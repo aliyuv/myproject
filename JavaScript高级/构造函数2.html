@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Person(name = "匿名", age = 1) {
+        this.name = name;
+        this.age = age;
+      }
+
+      // 共有属性
+      Person.prototype.syaHi = function () {
+        console.log(`你好，我是${this.name}，今年${this.age}岁了`);
+      };
+      //构造函数方式的共有属性不一定非要是函数
+      Person.prototype.种族 = "人类";
+      const p1 = new Person("张三", 20);
+      p1.syaHi();
+      console.dir(p1);
+    </script>
+    <script>
+      // class方式共有属性不可以是非函数
+      class Person1 {
+        constructor(name = "匿名", age = 1) {
+          this.name = name;
+          this.age = age;
+        }
+        sayHi() {
+          console.log(`你好，我是${this.name}，今年${this.age}岁了`);
+        }
+        种族 = "人类";
+      }
+      const p2 = new Person1("赵四", 18);
+      console.dir(p2);
+    </script>
+  </body>
+</html>
