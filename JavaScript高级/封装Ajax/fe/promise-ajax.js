@@ -15,11 +15,27 @@ function myAjax(method, url) {
   });
 }
 
-myAjax("GET", "https://api.apiopen.top/api/sentences").then(
-  (response) => {
-    console.log(response);
-  },
-  (response) => {
-    console.log(response);
-  }
-);
+myAjax("GET", "https://api.apiopen.top/api/sentences")
+  .then((response) => {
+    console.log(response.responseText);
+  })
+  .then((response) => {
+    return myAjax("GET", "https://api.apiopen.top/api/getTime");
+  })
+  .then((response) => {
+    // return new Promise(() => {}); // 终止promise链
+    console.log(JSON.parse(response.responseText).result);
+  })
+  .then((response) => {
+    return myAjax(
+      "GET",
+      "https://api.apiopen.top/api/getImages?type=animal&page=0&size=10"
+    );
+  })
+  .then((response) => {
+    console.log(JSON.parse(response.responseText));
+    return new Promise(() => {});
+  })
+  .then(() => {
+    console.log("终止promise链");
+  });
